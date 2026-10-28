@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b32">
+  <meta name="description" content="Meet Auto Tiller: an app-connected steering assistance prototype inspired by the challenge of sailing alone. Explore the idea, try the heading simulator, and see the hardware.">
+  <meta property="og:title" content="Auto Tiller — A little help at the helm.">
+  <meta property="og:description" content="Your sails. Your heading. A little help at the helm. Explore an app-connected steering prototype for solo sailors.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rd3656r.github.io/auto_tiller_website/">
+  <link rel="canonical" href="https://rd3656r.github.io/auto_tiller_website/">
+  <meta property="og:image" content="https://rd3656r.github.io/auto_tiller_website/assets/sailing-hero.jpg">
+  <title>Auto Tiller — A little help at the helm.</title>
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="enhancements.css?v=2">
+  <script src="app.js?v=2" defer></script>
+  <script src="enhancements.js?v=2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Auto Tiller home"><img src="assets/icon.png" width="42" height="42" alt=""><span>Auto Tiller</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#story">The idea</a><a href="#experience">Try it out</a><a href="#hardware">Under the lid</a><a href="#contact">Get in touch</a>
+    </nav>
+    <a class="nav-action" href="#film">Watch the prototype <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#story">The idea</a><a href="#experience">Try it out</a><a href="#hardware">Under the lid</a><a href="#notes">Engineering notes</a><a href="#contact">Get in touch</a><a href="#film">Watch the prototype ↗</a></nav>
+
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> A project born on the water</p>
+        <h1 id="hero-title">Your sails.<br>Your heading.<br><em>A little help.</em></h1>
+        <p class="hero-description">Meet Auto Tiller. An app-connected steering prototype, designed to give solo sailors more freedom to focus on the sails.</p>
+        <div class="hero-actions"><a href="#experience" class="button button-dark">Take the helm <span aria-hidden="true">↗</span></a><a href="#story" class="text-link">Start with the story <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-footnote"><span class="small-cross" aria-hidden="true">✳</span><p>A real sailing problem.<br>A hands-on engineering experiment.</p></div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-photo" src="assets/sailing-hero.jpg" alt="Sailors handling a small sailboat with a blue spinnaker and yellow mainsail." fetchpriority="high">
+        <div class="photo-topline"><span>OUT ON THE WATER</span><span class="crosshair" aria-hidden="true">⊕</span></div>
+        <div class="photo-bottomline"><span>LESS JUGGLING.<br>MORE SAILING.</span><a href="#experience" aria-label="Explore the heading simulator">↓</a></div>
+        <div class="hero-phone"><div class="phone-top"></div><img src="assets/app-heading.jpg" alt="Actual Auto Tiller app: compass, selected heading, and a disengage control."><span class="phone-tag">THE ACTUAL APP <span>↗</span></span></div>
+        <div class="vertical-caption">SMALL BOAT. BIG IDEA.</div>
+      </div>
+    </section>
+
+    <div class="project-strip"><span><span class="status-dot"></span> PROTOTYPE IN DEVELOPMENT</span><span>APP + SENSORS + ACTUATOR</span><span>INSPIRED BY SOLO SAILING <span aria-hidden="true">↗</span></span></div>
+
+    <section class="story section-wrap" id="story" aria-labelledby="story-title">
+      <div class="section-kicker"><span>01 / THE STARTING POINT</span><span aria-hidden="true">↘</span></div>
+      <div class="story-layout">
+        <div class="story-image reveal"><img src="assets/sailing-solo.jpg" alt="Ryan sailing alone, managing the tiller and a sail line." loading="lazy"><span class="image-index">FIELD NOTES / 001</span></div>
+        <div class="story-copy reveal"><p class="eyebrow">Two hands. One sailor.</p><h2 id="story-title">Some days, I just<br>needed <em>another hand.</em></h2><p>When I was learning to sail, I often didn’t have a teammate. Keeping one hand on the tiller while adjusting a sail could turn a simple task into a scramble.</p><p>Practice helped. Then came the jib and spinnaker, and the juggling started all over again. Auto Tiller grew from a question I kept coming back to:</p><blockquote>“What if something could help hold my heading while I worked the sails?”</blockquote><div class="author"><span class="author-mark">RD</span><div><strong>Ryan Deng</strong><span>Sailor · Student · Auto Tiller project</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="section-wrap">
+        <div class="section-kicker light"><span>02 / A FEEL FOR THE IDEA</span><span>INTERACTIVE EXPLORATION</span></div>
+        <div class="experience-heading reveal"><div><p class="eyebrow">Less explaining. More exploring.</p><h2 id="experience-title">Go on.<br><em>Take the helm.</em></h2></div><p>Choose a heading. Add a little disturbance. See how steering assistance is intended to bring the boat back toward your course.</p></div>
+        <div class="helm-lab reveal">
+          <div class="ocean-stage">
+            <div class="stage-top"><span class="lab-pill"><span class="status-dot"></span> WEB SIMULATION</span><button class="reset-button" id="reset-sim" aria-label="Reset simulation">Reset <span aria-hidden="true">↺</span></button></div>
+            <svg class="ocean-map" viewBox="0 0 700 590" role="img" aria-labelledby="ocean-title"><title id="ocean-title">Illustrative boat heading simulator</title><defs><pattern id="map-grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="#dce6da" stroke-opacity=".09" stroke-width="1"/></pattern><pattern id="sea-waves" width="100" height="90" patternUnits="userSpaceOnUse"><path d="M20 30q8-7 16 0t16 0" fill="none" stroke="#c9d7ca" stroke-opacity=".13" stroke-width="1"/></pattern></defs><rect width="700" height="590" fill="url(#map-grid)"/><rect width="700" height="590" fill="url(#sea-waves)"/><g transform="translate(350 295)"><circle r="208" fill="none" stroke="#dce6da" stroke-opacity=".14"/><circle r="154" fill="none" stroke="#dce6da" stroke-opacity=".06" stroke-dasharray="2 8"/><g id="compass-ticks"></g><text x="0" y="-226" class="compass-label">N</text><text x="226" y="5" class="compass-label">E</text><text x="0" y="240" class="compass-label">S</text><text x="-226" y="5" class="compass-label">W</text><g id="target-vector"><path d="M0 122V-199" stroke="#d7ed8a" stroke-width="1.5" stroke-dasharray="5 7"/><circle cy="-207" r="5" fill="#d7ed8a"/><path d="M-7-184 0-195 7-184" fill="none" stroke="#d7ed8a"/></g><g id="boat-group"><path class="boat-wake" d="M-10 47Q-24 76-46 89M10 47Q24 76 46 89M-7 55Q-12 90-24 113M7 55Q12 90 24 113" fill="none" stroke="#dce6da" stroke-opacity=".3" stroke-width="2"/><path d="M0-67C-25-39-30 2-18 41Q0 55 18 41C30 2 25-39 0-67Z" fill="#f7f6ee"/><path d="M0-44V30" stroke="#293e3f" stroke-width="2"/><path d="M-4-35-20 20H-4Z" fill="#c4d5c4"/><path d="M4-24 18 20H4Z" fill="#d7ed8a"/><circle cy="35" r="3" fill="#293e3f"/></g><circle r="4" fill="#d7ed8a" opacity=".6"/></g></svg>
+            <div class="stage-bottom"><div><span class="metric-label">CURRENT HEADING</span><strong id="current-heading">045<span>°</span></strong></div><div class="response-state"><span class="status-dot"></span><span id="response-state">Holding heading</span></div></div>
+            <div class="gust-flash" id="gust-flash" aria-hidden="true">↗ &nbsp; DISTURBANCE APPLIED</div>
+          </div>
+          <div class="helm-controls"><div class="control-header"><span class="tiny-label">YOUR COURSE</span><span class="tiny-label">00 — 359°</span></div><label class="heading-label" for="heading-slider">Where are we heading?</label><div class="target-readout"><output id="target-heading" for="heading-slider">045</output><span>°</span></div><input id="heading-slider" type="range" min="0" max="359" value="45" aria-label="Target heading in degrees"><div class="range-labels"><span>N / 0°</span><span>S / 180°</span><span>N / 360°</span></div><div class="heading-nudges"><button id="heading-left">−10° <span>Port</span></button><button id="heading-right">+10° <span>Starboard</span></button></div><div class="assistance-row"><div><strong>Steering assistance</strong><span id="assistance-description">Working toward your heading</span></div><button class="switch" id="assistance-toggle" role="switch" aria-checked="true" aria-label="Steering assistance"><span></span></button></div><button class="button button-lime gust-button" id="add-gust"><span aria-hidden="true">≋</span> Add a disturbance <span aria-hidden="true">↗</span></button><p class="lab-explainer" id="lab-explainer">Watch the boat ease back toward the dotted course line. Try switching assistance off to compare.</p><p class="simulation-note">Illustration only. This simplified model does not predict real-world performance or connect to a boat.</p></div>
+        </div>
+
+        <div class="lab-extension reveal">
+          <div class="tuning-bar">
+            <div><p class="tiny-label">THE TUNING QUESTION</p><h3>More correction isn’t always better.</h3></div>
+            <div class="tuning-options" role="group" aria-label="Illustrative controller tuning">
+              <button class="tuning-option" data-tuning="balanced" aria-pressed="true">Balanced <span>Calm corrections</span></button>
+              <button class="tuning-option" data-tuning="reactive" aria-pressed="false">Too reactive <span>Watch the overshoot</span></button>
+            </div>
+          </div>
+          <div class="telemetry-panel">
+            <div class="telemetry-heading"><span><span class="telemetry-dot"></span> SIMULATED HEADING ERROR</span><output id="sim-error" aria-live="off">0.0°</output></div>
+            <svg class="response-chart" viewBox="0 0 760 150" preserveAspectRatio="none" role="img" aria-label="Live simulated heading error over the last 20 seconds, with zero at the center line">
+              <path d="M20 25H740M20 75H740M20 125H740" fill="none" stroke="#ceddc0" stroke-opacity=".12"/>
+              <path d="M20 75H740" fill="none" stroke="#d8ec96" stroke-width="1" stroke-dasharray="4 5"/>
+              <path id="response-trace" d="M20 75H740" fill="none" stroke="#a3d6ce" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <text id="chart-scale" x="20" y="17">SCALE ±30°</text><text x="20" y="145">20 SECONDS AGO</text><text x="740" y="145" text-anchor="end">NOW</text><text x="735" y="67" text-anchor="end">TARGET</text>
+            </svg>
+            <div class="telemetry-footer"><p id="tuning-explanation">Balanced tuning eases the model toward the target. Compare the same disturbance with a more reactive setting.</p><button id="try-north" class="north-challenge">Try 350° → 010° <span aria-hidden="true">↗</span></button></div>
+          </div>
+          <details class="lab-detail"><summary>What does this tell us about PID tuning?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>Responding strongly to every tiny heading error can cause repeated corrections past the target. A useful controller must balance responsiveness with damping, sensor noise, and the actuator’s physical limits.</p><p>This two-setting web model illustrates that tradeoff. It is not the actual ESP32 firmware or a measured PID result. Real tuning needs data from the hardware and, eventually, controlled on-water trials.</p></div></details>
+        </div>
+        <div class="experience-bottom"><span aria-hidden="true">✳</span><p>The goal is a little less workload.<br><strong>The sailor stays in charge.</strong></p><a href="#film" class="text-link">See the real prototype <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="hardware section-wrap" id="hardware" aria-labelledby="hardware-title">
+      <div class="section-kicker"><span>03 / UNDER THE LID</span><span>SOFTWARE MEETS THE PHYSICAL WORLD</span></div>
+      <div class="section-heading reveal"><h2 id="hardware-title">A small system.<br><em>A connected idea.</em></h2><p>A heading on your phone becomes a steering correction through sensors, a controller, and a linear actuator.</p></div>
+      <div class="hardware-layout reveal"><div class="hardware-photo"><img id="hardware-image" src="assets/electronics.jpg" alt="Auto Tiller prototype electronics: ESP32 controller, IMU, and GPS connected by wires." loading="lazy"><div class="hardware-photo-label"><span class="status-dot"></span><span id="hardware-photo-label">ACTUAL PROTOTYPE / SENSOR + CONTROLLER</span></div><span class="photo-corner" aria-hidden="true">+</span></div><div class="hardware-details"><div class="hardware-tabs" role="tablist" aria-label="Explore the prototype"><button class="hardware-tab" id="tab-sense" role="tab" aria-selected="true" aria-controls="hardware-panel" data-part="sense">01 Sense</button><button class="hardware-tab" id="tab-decide" role="tab" aria-selected="false" tabindex="-1" aria-controls="hardware-panel" data-part="decide">02 Decide</button><button class="hardware-tab" id="tab-move" role="tab" aria-selected="false" tabindex="-1" aria-controls="hardware-panel" data-part="move">03 Move</button></div><div id="hardware-panel" role="tabpanel" aria-labelledby="tab-sense" tabindex="0"><div class="hardware-glyph" id="hardware-glyph" aria-hidden="true">⊕</div><p class="eyebrow" id="hardware-subtitle">Start by understanding direction.</p><h3 id="hardware-name">A sense of heading.</h3><p id="hardware-description">A 9-axis inertial measurement unit (IMU) provides data used to estimate heading. GPS supplies position information. The ESP32 brings these inputs into the control system.</p><div class="tech-tags" id="hardware-tags"><span>9-axis IMU</span><span>GPS</span><span>ESP32</span></div></div><div class="hardware-footer"><span>PHONE</span><span aria-hidden="true">↔</span><span>BLUETOOTH</span><span aria-hidden="true">↔</span><span>CONTROLLER</span></div></div></div>
+      <div class="system-details"><div><span class="detail-number">01</span><h3>Pick your heading.</h3><p>The Flutter app provides heading selection, system status, and a control to disengage assistance.</p></div><div><span class="detail-number">02</span><h3>Close the loop.</h3><p>The PID controller uses heading error to calculate a correction. Tuning aims to limit unnecessary back-and-forth movement.</p></div><div><span class="detail-number">03</span><h3>Move the tiller.</h3><p>A motor driver powers the 12 V linear actuator, turning an electronic command into a physical push or pull.</p></div></div>
+
+      <div class="signal-story reveal" aria-labelledby="signal-title">
+        <div class="signal-story-top"><div><p class="eyebrow">Follow one correction</p><h3 id="signal-title">From a number to a movement.</h3></div><span class="tiny-label">ILLUSTRATIVE SIGNAL PATH</span></div>
+        <div class="signal-steps" role="tablist" aria-label="Follow the steering control loop">
+          <button class="signal-step" id="signal-0" role="tab" aria-selected="true" aria-controls="signal-panel" data-step="0"><span class="signal-step-number">01</span><span>Choose<span>Phone + Bluetooth</span></span><span class="signal-arrow" aria-hidden="true">→</span></button>
+          <button class="signal-step" id="signal-1" role="tab" aria-selected="false" tabindex="-1" aria-controls="signal-panel" data-step="1"><span class="signal-step-number">02</span><span>Compare<span>IMU + ESP32</span></span><span class="signal-arrow" aria-hidden="true">→</span></button>
+          <button class="signal-step" id="signal-2" role="tab" aria-selected="false" tabindex="-1" aria-controls="signal-panel" data-step="2"><span class="signal-step-number">03</span><span>Correct<span>Driver + actuator</span></span><span class="signal-arrow" aria-hidden="true">↺</span></button>
+        </div>
+        <div class="signal-panel" id="signal-panel" role="tabpanel" aria-labelledby="signal-0" tabindex="0"><div class="signal-number"><span id="signal-metric-label">SELECTED HEADING</span><strong id="signal-metric">045<span>°</span></strong><span id="signal-metric-note">An example course chosen in the app.</span></div><div class="signal-explanation"><h4 id="signal-heading">It starts with your decision.</h4><p id="signal-description">The sailor selects a heading in the phone app. A Bluetooth connection carries that request to the ESP32. The phone is the interface; the controller handles the steering loop.</p><button class="signal-next" id="signal-next">Next: compare the heading <span aria-hidden="true">→</span></button></div></div>
+      </div>
+    </section>
+
+    <section class="film-section" id="film" aria-labelledby="film-title"><div class="section-wrap"><div class="section-kicker"><span>04 / FROM IDEA TO PROTOTYPE</span><span>THE PROJECT FILM · 02:43</span></div><div class="section-heading reveal"><h2 id="film-title">See what’s<br><em>taking shape.</em></h2><p>The story, the app, and the hardware in one short film. Recorded bench demonstrations show the current prototype.</p></div><div class="film-player reveal"><video id="project-video" controls playsinline preload="none" poster="assets/video-poster.jpg" aria-label="Auto Tiller project film by Ryan Deng"><source src="assets/auto-tiller-demo.mp4" type="video/mp4"><track kind="captions" src="assets/captions.vtt" srclang="en" label="English">Your browser does not support this video. <a href="assets/auto-tiller-demo.mp4">Download the project film.</a></video><button class="film-overlay" id="play-film" aria-label="Play the Auto Tiller project film"><span class="play-icon" aria-hidden="true">▶</span><span>MEET AUTO TILLER</span><span>Ryan Deng / 2 min 43 sec</span></button></div><div class="film-caption"><span><span class="status-dot"></span> REAL APP. REAL HARDWARE. BENCH DEMONSTRATION.</span><a href="https://youtu.be/LW-5j4AG59Y" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗</span></a></div></div></section>
+
+
+    <section class="engineering-notes section-wrap" id="notes" aria-labelledby="notes-title">
+      <div class="section-kicker"><span>05 / THE ENGINEERING NOTEBOOK</span><span>OPEN A PAGE. GO A LITTLE DEEPER.</span></div>
+      <div class="notes-layout"><div class="notes-intro reveal"><p class="eyebrow">The interesting part is in the details.</p><h2 id="notes-title">Under the idea.<br><em>Into the work.</em></h2><p>A prototype is a series of decisions, experiments, and things that don’t work the first time. Here are some of the questions behind Auto Tiller.</p><a href="https://github.com/AutoTiller/auto_tiller" class="text-link" target="_blank" rel="noopener noreferrer">Open the app source <span aria-hidden="true">↗</span></a><div class="notebook-stamp" aria-hidden="true"><span>FIELD<br>NOTES</span><span>AT / 026</span></div></div>
+      <div class="notebook-pages reveal">
+        <details class="notebook-page" open><summary><span class="note-index">01</span><span><span class="tiny-label">APP + EMBEDDED SYSTEM</span>Who does what?</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>The mobile interface uses <strong>Dart and Flutter</strong>. It lets the sailor choose a heading, see status information, and disengage assistance. Bluetooth connects it with the ESP32 controller.</p><p>The ESP32 handles sensor inputs and the control loop. The IMU supports heading estimation, GPS provides position information, and the motor driver operates the actuator. Keeping those roles clear helps make problems easier to trace.</p><a href="https://github.com/AutoTiller/tillerv1" target="_blank" rel="noopener noreferrer">Explore the firmware ↗</a></div></details>
+        <details class="notebook-page"><summary><span class="note-index">02</span><span><span class="tiny-label">CONTROL LOGIC</span>Why heading error needs care.</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>A compass wraps around at north. Going from 350° to 10° is a 20° turn, rather than a 340° turn in the opposite direction. A steering controller needs to compare angles across that boundary.</p><div class="note-equation"><span>350°</span><span aria-hidden="true">→ NORTH →</span><span>010°</span><strong>20° apart</strong></div><p>PID tuning adds another challenge: reacting too aggressively can lead to overshoot and repeated left-right adjustments. The aim is useful correction without chasing every small fluctuation.</p><a href="#experience">Try the tuning comparison ↑</a></div></details>
+        <details class="notebook-page"><summary><span class="note-index">03</span><span><span class="tiny-label">A REAL DEVELOPMENT PROBLEM</span>The bug wasn’t in the code.</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>Early on, the linear actuator wouldn’t run. Several program changes failed to solve it. Testing eventually traced the issue to a faulty power converter that wasn’t supplying enough power for the actuator.</p><p>The actuator and low-voltage electronics have different supply requirements. That experience made the power system part of the debugging process, alongside software, wiring, and sensor readings.</p><p class="note-takeaway">Takeaway: when software controls hardware, a silent motor doesn’t automatically mean a software bug.</p></div></details>
+        <details class="notebook-page"><summary><span class="note-index">04</span><span><span class="tiny-label">TESTING PLAN</span>What needs to be measured?</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>Bench demonstrations can show communication, sensor changes, and actuator movement. They cannot establish how well a boat will hold a course in wind and waves.</p><div class="measurement-list"><div><strong>Heading error</strong><span>How far does the boat remain from the selected course?</span></div><div><strong>Response & settling</strong><span>How quickly does it recover, and does it overshoot?</span></div><div><strong>Actuator activity</strong><span>How often is the steering mechanism moving?</span></div><div><strong>Power use</strong><span>How much energy does the system consume while working?</span></div></div><p>These are planned evaluation measures. Controlled on-water trials and measured results are still ahead.</p></div></details>
+        <details class="notebook-page"><summary><span class="note-index">05</span><span><span class="tiny-label">PHYSICAL DESIGN</span>What the enclosure still has to do.</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>A practical sailing installation needs more than a box around the boards. Mounting, cable strain, moisture, access to power, and the actuator’s connection to the tiller all affect the design.</p><p>The enclosure and bench layout shown here are development hardware. Environmental protection, installation, and a clear way for the sailor to take control need evaluation before use on the water.</p></div></details>
+      </div></div>
+    </section>
+    <section class="horizon section-wrap" id="horizon" aria-labelledby="horizon-title"><div class="section-kicker"><span>06 / ON THE HORIZON</span><span>THE NEXT CHAPTER</span></div><div class="horizon-layout"><div class="reveal"><p class="eyebrow">Built with curiosity. Tested step by step.</p><h2 id="horizon-title">Still learning.<br><em>Still building.</em></h2><p class="horizon-description">Auto Tiller is an experimental prototype. Heading control still needs controlled on-water testing. The next chapter starts with measuring how it performs.</p><a href="https://github.com/AutoTiller/auto_tiller" class="text-link" target="_blank" rel="noopener noreferrer">Explore the app repository <span aria-hidden="true">↗</span></a></div><div class="roadmap reveal"><article class="roadmap-row"><span class="roadmap-dot active"></span><div><span class="tiny-label">CURRENT FOCUS</span><h3>From the bench to the boat.</h3><p>Evaluate heading error, response, actuator activity, and power use in controlled trials.</p></div><span aria-hidden="true">01</span></article><article class="roadmap-row"><span class="roadmap-dot"></span><div><span class="tiny-label">FUTURE EXPLORATION</span><h3>Controls within easier reach.</h3><p>Explore quick heading adjustments and clearer status feedback when a sailor’s hands are busy.</p></div><span aria-hidden="true">02</span></article><article class="roadmap-row"><span class="roadmap-dot"></span><div><span class="tiny-label">FUTURE EXPLORATION</span><h3>Listen to the wind.</h3><p>Investigate wind sensing and simple sail-trim suggestions to support a sailor’s own judgment.</p></div><span aria-hidden="true">03</span></article></div></div></section>
+
+
+    <section class="questions section-wrap" id="questions" aria-labelledby="questions-title">
+      <div class="questions-intro"><p class="eyebrow">A few good questions.</p><h2 id="questions-title">Before we<br><em>set sail.</em></h2><p>What the project is, what it is exploring, and what still needs to happen.</p></div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Can I download this and use it on my boat?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>Auto Tiller is currently an experimental prototype, rather than a ready-to-use marine product. The source repositories are available to explore, but boat-specific installation, validation, and controlled on-water testing are still needed.</p></div></details>
+        <details class="faq-item"><summary>Does it sail to a destination automatically?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>The project’s core focus is holding a selected heading. GPS position displays and the app’s destination-related interface do not establish that autonomous navigation has been validated. Route following and obstacle avoidance are outside the demonstrated scope.</p></div></details>
+        <details class="faq-item"><summary>Does steering assistance control the sails too?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>No. The actuator is intended to assist the tiller. The sailor still handles the sails and makes sailing decisions. Wind sensing and sail-trim suggestions are future ideas to investigate.</p></div></details>
+        <details class="faq-item"><summary>Is the interactive boat showing real test data?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>The boat and chart on this page are a simplified, browser-only illustration. They help explain heading correction and tuning tradeoffs. They are not connected to hardware and do not represent recorded or predicted on-water performance.</p></div></details>
+        <details class="faq-item"><summary>How can I share feedback or ask a technical question?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>Email Ryan at <a href="mailto:ryandeng24@gmail.com">ryandeng24@gmail.com</a>. Feedback from sailors, builders, and people interested in control systems is welcome.</p></div></details>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-wrap contact-layout"><div class="contact-copy"><p class="eyebrow"><span class="status-dot"></span> AN OPEN CONVERSATION</p><h2 id="contact-title">Have a thought?<br><em>Let’s talk sailing.</em></h2><p>A question about the prototype, a sailing experience, or an idea worth trying — I’d like to hear it.</p><div class="contact-signature"><span class="author-mark">RD</span><div><strong>Ryan Deng</strong><span>Auto Tiller project</span></div></div></div><div class="contact-card"><span class="tiny-label">DIRECT TO RYAN</span><span class="contact-arrow" aria-hidden="true">↗</span><a class="email-address" id="contact-email" href="mailto:ryandeng24@gmail.com">ryandeng24@gmail.com</a><p>Good conversations are a useful place to start.</p><div class="contact-actions"><a class="button button-dark" href="mailto:ryandeng24@gmail.com?subject=Hello%20from%20the%20Auto%20Tiller%20website">Write an email <span aria-hidden="true">↗</span></a><button class="copy-email" id="copy-email">Copy address <span aria-hidden="true">⧉</span></button></div><p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite">Opens your email app. Nothing is sent automatically.</p></div></div>
+    </section>
+    <section class="closing"><div class="closing-compass" aria-hidden="true"><span>N</span><div></div></div><p class="eyebrow">For the days you sail your own way.</p><h2>A little help<br><em>at the helm.</em></h2><a class="button button-lime" href="#experience">Find your heading <span aria-hidden="true">↗</span></a><div class="closing-water" aria-hidden="true"></div></section>
+  </main>
+
+  <footer class="site-footer"><a href="#" class="brand"><img src="assets/icon.png" alt="" width="38" height="38"><span>Auto Tiller</span></a><p>A sailing-inspired project by Ryan Deng.<br>Experimental prototype · In development</p><div><a href="https://github.com/AutoTiller/auto_tiller" target="_blank" rel="noopener noreferrer">App source ↗</a><a href="https://github.com/AutoTiller/tillerv1" target="_blank" rel="noopener noreferrer">Firmware ↗</a><a href="mailto:ryandeng24@gmail.com">Email Ryan ↗</a><a href="#" class="back-top">Back to top ↑</a></div></footer>
+</body>
+</html>
