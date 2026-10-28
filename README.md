@@ -33,9 +33,8 @@ Run `python3 serve.py` for a local preview, or double-click `Start-Website.comma
 
 GitHub Pages serves the **root of the main branch**. `.nojekyll` keeps the site as plain static files. Push changes to `main` to publish an update.
 
-## Related repositories
+## App and firmware
 
-- [Flutter app](https://github.com/AutoTiller/auto_tiller)
-- [ESP32 firmware](https://github.com/AutoTiller/tillerv1)
+The app and firmware development repositories are private.
 
 Bundled DM Sans and Manrope fonts retain their SIL Open Font License notices in `assets/fonts/`. Website assets and project material remain subject to their respective rights; this repository does not grant a blanket license for those materials.
