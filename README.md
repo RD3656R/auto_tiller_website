@@ -4,6 +4,11 @@ A sailing-inspired website for the Auto Tiller steering-assistance prototype.
 
 **Live website:** https://rd3656r.github.io/auto_tiller_website/
 
+## Get the app
+
+- [Android on Google Play](https://play.google.com/store/apps/details?id=com.ryandeng.autotiller)
+- iOS: pending App Store review. The App Store link will be added after approval.
+
 ## Explore
 
 - Ryan’s sailing story, original sail icon, real app screenshots, and hardware photos.

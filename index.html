@@ -14,7 +14,7 @@
   <title>Auto Tiller — A little help at the helm.</title>
   <link rel="icon" href="assets/icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=2">
-  <link rel="stylesheet" href="enhancements.css?v=2">
+  <link rel="stylesheet" href="enhancements.css?v=3">
   <script src="app.js?v=2" defer></script>
   <script src="enhancements.js?v=2" defer></script>
 </head>
@@ -37,7 +37,7 @@
         <p class="eyebrow"><span class="status-dot"></span> A project born on the water</p>
         <h1 id="hero-title">Your sails.<br>Your heading.<br><em>A little help.</em></h1>
         <p class="hero-description">Meet Auto Tiller. An app-connected steering prototype, designed to give solo sailors more freedom to focus on the sails.</p>
-        <div class="hero-actions"><a href="#experience" class="button button-dark">Take the helm <span aria-hidden="true">↗</span></a><a href="#story" class="text-link">Start with the story <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-actions"><a href="#experience" class="button button-dark">Take the helm <span aria-hidden="true">↗</span></a><a href="https://play.google.com/store/apps/details?id=com.ryandeng.autotiller" class="text-link" target="_blank" rel="noopener noreferrer">Get the Android app <span aria-hidden="true">↗</span></a></div>
         <div class="hero-footnote"><span class="small-cross" aria-hidden="true">✳</span><p>A real sailing problem.<br>A hands-on engineering experiment.</p></div>
       </div>
       <div class="hero-visual">
@@ -51,6 +51,16 @@
 
     <div class="project-strip"><span><span class="status-dot"></span> PROTOTYPE IN DEVELOPMENT</span><span>APP + SENSORS + ACTUATOR</span><span>INSPIRED BY SOLO SAILING <span aria-hidden="true">↗</span></span></div>
 
+
+    <section class="app-download" id="download" aria-labelledby="download-title">
+      <div class="section-wrap download-layout">
+        <div class="download-copy"><p class="eyebrow"><span class="status-dot"></span> THE MOBILE APP</p><h2 id="download-title">Meet the app.</h2><p>Explore Auto Tiller on Android. Steering assistance requires compatible Auto Tiller hardware.</p></div>
+        <div class="download-platforms">
+          <a class="play-download" href="https://play.google.com/store/apps/details?id=com.ryandeng.autotiller" target="_blank" rel="noopener noreferrer" aria-label="Download Auto Tiller on Google Play"><svg width="22" height="27" viewBox="0 0 22 27" fill="none" aria-hidden="true"><rect x="3" y="1" width="16" height="24" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M11 7v9m-4-4 4 4 4-4M9 21h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span>GET IT ON</span><strong>Google Play</strong></span><span aria-hidden="true">↗</span></a>
+          <div class="ios-review"><span class="ios-review-dot" aria-hidden="true"></span><div><strong>iOS is on its way.</strong><span>Pending App Store review</span></div></div>
+        </div>
+      </div>
+    </section>
     <section class="story section-wrap" id="story" aria-labelledby="story-title">
       <div class="section-kicker"><span>01 / THE STARTING POINT</span><span aria-hidden="true">↘</span></div>
       <div class="story-layout">
@@ -134,7 +144,7 @@
     <section class="questions section-wrap" id="questions" aria-labelledby="questions-title">
       <div class="questions-intro"><p class="eyebrow">A few good questions.</p><h2 id="questions-title">Before we<br><em>set sail.</em></h2><p>What the project is, what it is exploring, and what still needs to happen.</p></div>
       <div class="faq-list">
-        <details class="faq-item"><summary>Can I download this and use it on my boat?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>Auto Tiller is currently an experimental prototype, rather than a ready-to-use marine product. The project is not currently offered as a ready-to-use download. Boat-specific installation, validation, and controlled on-water testing are still needed.</p></div></details>
+        <details class="faq-item"><summary>Can I download this and use it on my boat?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>The Android app is available on <a href="https://play.google.com/store/apps/details?id=com.ryandeng.autotiller" target="_blank" rel="noopener noreferrer">Google Play</a>. Steering assistance requires compatible Auto Tiller hardware. The steering system remains an experimental prototype, with boat-specific installation, validation, and controlled on-water testing still needed. The iOS version is awaiting App Store review.</p></div></details>
         <details class="faq-item"><summary>Does it sail to a destination automatically?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>The project’s core focus is holding a selected heading. GPS position displays and the app’s destination-related interface do not establish that autonomous navigation has been validated. Route following and obstacle avoidance are outside the demonstrated scope.</p></div></details>
         <details class="faq-item"><summary>Does steering assistance control the sails too?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>No. The actuator is intended to assist the tiller. The sailor still handles the sails and makes sailing decisions. Wind sensing and sail-trim suggestions are future ideas to investigate.</p></div></details>
         <details class="faq-item"><summary>Is the interactive boat showing real test data?<span class="expand-icon" aria-hidden="true"></span></summary><div class="detail-body"><p>The boat and chart on this page are a simplified, browser-only illustration. They help explain heading correction and tuning tradeoffs. They are not connected to hardware and do not represent recorded or predicted on-water performance.</p></div></details>
@@ -148,6 +158,6 @@
     <section class="closing"><div class="closing-compass" aria-hidden="true"><span>N</span><div></div></div><p class="eyebrow">For the days you sail your own way.</p><h2>A little help<br><em>at the helm.</em></h2><a class="button button-lime" href="#experience">Find your heading <span aria-hidden="true">↗</span></a><div class="closing-water" aria-hidden="true"></div></section>
   </main>
 
-  <footer class="site-footer"><a href="#" class="brand"><img src="assets/icon.png" alt="" width="38" height="38"><span>Auto Tiller</span></a><p>A sailing-inspired project by Ryan Deng.<br>Experimental prototype · In development</p><div><a href="mailto:ryandeng24@gmail.com">Email Ryan ↗</a><a href="#" class="back-top">Back to top ↑</a></div></footer>
+  <footer class="site-footer"><a href="#" class="brand"><img src="assets/icon.png" alt="" width="38" height="38"><span>Auto Tiller</span></a><p>A sailing-inspired project by Ryan Deng.<br>Experimental prototype · In development</p><div><a href="https://play.google.com/store/apps/details?id=com.ryandeng.autotiller" target="_blank" rel="noopener noreferrer">Google Play ↗</a><a href="mailto:ryandeng24@gmail.com">Email Ryan ↗</a><a href="#" class="back-top">Back to top ↑</a></div></footer>
 </body>
 </html>
